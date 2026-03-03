@@ -1,0 +1,27 @@
+{
+  "mcpServers": {
+    "strands-agents": {
+      "command": "uvx",
+      "args": ["strands-agents-mcp-server"],
+      "env": {
+        "FASTMCP_LOG_LEVEL": "INFO"
+      },
+      "disabled": false,
+      "autoApprove": ["search_docs", "fetch_doc"]
+    },
+    "bedrock-agentcore-mcp-server": {
+      "command": "uvx",
+      "args": ["awslabs.amazon-bedrock-agentcore-mcp-server@latest"],
+      "env": {
+        "FASTMCP_LOG_LEVEL": "ERROR"
+      },
+      "disabled": false,
+      "autoApprove": []
+    },
+    "aws-knowledge-mcp-server": {
+      "url": "https://knowledge-mcp.global.api.aws",
+      "type": "http",
+      "disabled": false
+    }
+  }
+}
